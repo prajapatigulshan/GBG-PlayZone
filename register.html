@@ -41,6 +41,19 @@
             <button type="submit">Register</button>
         </form>
     </div>
+<script>
+const form = document.querySelector('.register-form');
 
+form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Page reload रोकता है
+    const name = form.name.value;
+    const team = form.team.value;
+    const game = form.game.value;
+    const ingameid = form.ingameid.value;
+    const whatsapp = form.whatsapp.value;
+
+    alert(`Player Registered!\nName: ${name}\nTeam: ${team}\nGame: ${game}`);
+});
+</script>
 </body>
 </html>
