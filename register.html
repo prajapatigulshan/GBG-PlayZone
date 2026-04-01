@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBG PlayZone - Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop id="bg-video">
+        <source src="assets/videos/bg.mp4" type="video/mp4">
+    </video>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Navigation (Same as Homepage) -->
+    <nav>
+        <div class="logo">GBG PlayZone</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="tournaments.html">Tournaments</a></li>
+            <li><a href="register.html" class="active">Register</a></li>
+        </ul>
+    </nav>
+
+    <!-- Registration Section -->
+    <div class="register-container">
+        <h1>Player Registration</h1>
+
+        <form action="#" method="POST" class="register-form">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="text" name="team" placeholder="Team Name" required>
+            <input type="text" name="game" placeholder="Game Name (Free Fire / Minecraft / etc.)" required>
+            <input type="text" name="ingameid" placeholder="In-Game ID" required>
+            <input type="text" name="whatsapp" placeholder="WhatsApp Number" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+</body>
+</html>
