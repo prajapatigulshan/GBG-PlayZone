@@ -5,18 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GBG PlayZone - Rules</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .rules-container {
+            margin-top: 120px;
+            width: 90%;
+            max-width: 900px;
+            color: white;
+            background: rgba(255,255,255,0.08);
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .rules-container h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 25px;
+            text-shadow: 0 0 10px #00ff73;
+        }
+
+        .rules-container ul {
+            padding-left: 25px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .rules-container li {
+            margin: 10px 0;
+        }
+
+        .rules-section-title {
+            margin-top: 25px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #00ffbd;
+            text-shadow: 0 0 10px #00ffd5;
+        }
+    </style>
 </head>
+
 <body>
 
-    <!-- Background Video -->
-    <video autoplay muted loop id="bg-video">
-        <source src="assets/videos/bg.mp4" type="video/mp4">
-    </video>
+
 
     <!-- Overlay -->
     <div class="overlay"></div>
 
-    <!-- Navigation (Same as Homepage) -->
+    <!-- Navigation -->
     <nav>
         <div class="logo">GBG PlayZone</div>
         <ul class="nav-links">
@@ -28,20 +67,45 @@
         </ul>
     </nav>
 
-    <!-- Rules Section -->
+    <!-- Rules Content -->
     <div class="rules-container">
-        <h1>Tournament Rules</h1>
+        <h1>Game Rules</h1>
 
-        <ul class="rules-list">
-            <li>Each player must register before participating.</li>
-            <li>Players must follow the assigned game schedule.</li>
-            <li>Cheating or using hacks will lead to immediate disqualification.</li>
-            <li>Respect all players and admins during the tournament.</li>
-            <li>Team changes are not allowed once registration is complete.</li>
-            <li>All decisions by GBG PlayZone admins are final.</li>
+        <h2 class="rules-section-title">General Rules</h2>
+        <ul>
+            <li>Har player ko apna real in-game ID provide karna hoga.</li>
+            <li>Match time par na aane par automatic disqualification ho jayega.</li>
+            <li>Hacking, teaming, glitch use ya unfair advantage strictly banned hai.</li>
+            <li>Organizers ka decision final hoga.</li>
         </ul>
 
-        <p>Note: These rules apply to all games including Free Fire, Minecraft, BGMI, and PC Games.</p>
+        <h2 class="rules-section-title">Free Fire Rules</h2>
+        <ul>
+            <li>Emulator allowed nahi hai (mobile only).</li>
+            <li>Character skill allowed hai.</li>
+            <li>Teaming pakdi gayi to team ko ban kar diya jayega.</li>
+        </ul>
+
+        <h2 class="rules-section-title">BGMI Rules</h2>
+        <ul>
+            <li>TPP/ FPP mode organizer decide karega.</li>
+            <li>VPN strictly banned.</li>
+            <li>Squad coordination ke bina random teaming allowed nahi.</li>
+        </ul>
+
+        <h2 class="rules-section-title">Minecraft / PC Games Rules</h2>
+        <ul>
+            <li>No hacking mods or external scripts.</li>
+            <li>Only approved texture packs allowed.</li>
+            <li>Server rules follow karna mandatory hai.</li>
+        </ul>
+
+        <h2 class="rules-section-title">Penalty Rules</h2>
+        <ul>
+            <li>1st Warning → Point Deduction</li>
+            <li>2nd Warning → Match Loss</li>
+            <li>3rd Warning → Tournament Ban</li>
+        </ul>
     </div>
 
 </body>

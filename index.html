@@ -3,45 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GBG PlayZone</title>
-    <link rel="stylesheet" href="style.css">
+    <title>GBG PlayZone | Home</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d0d0d;
+            color: white;
+        }
+
+        header {
+            background: #1a1a1a;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            border-bottom: 2px solid #ffcc00;
+        }
+
+        nav {
+            background: #222;
+            display: flex;
+            justify-content: center;
+            padding: 12px 0;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 30px auto;
+            border: 2px solid #ffcc00;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .footer {
+            background: #1a1a1a;
+            padding: 15px;
+            text-align: center;
+            border-top: 2px solid #ffcc00;
+            margin-top: 40px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="logo">GBG PlayZone</div>
-        <ul class="nav-links">
-            <li><a href="index.html">home</a></li>
-            <li><a href="games.html">Games</a></li>
-            <li><a href="tournaments.html">Tournaments</a></li>
-            <li><a href="register.html">Register</a></li>
-            <li><a href="rules.html">Rules</a></li>
-        </ul>
+    <header>
+        GBG PlayZone 🎮
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="tournaments.html">Tournaments</a>
+        <a href="games.html">Games</a>
+        <a href="about.html">About</a>
     </nav>
 
-    <!-- VIDEO BACKGROUND -->
-    <video autoplay muted loop id="bg-video">
-        <source src="assets/videos/bg.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <div class="video-container">
+        <!-- 💥 Ye tumhari actual gameplay video hai. File name mat badalna. -->
+        <video autoplay muted loop controls>
+            <source src="bg.mp4" type="video/mp4">
+            Your browser does not support video playback.
+        </video>
+    </div>
 
-    <!-- DARK OVERLAY -->
-    <div class="overlay"></div>
-
-    <!-- MAIN CONTENT -->
-    <div class="content">
-        <h1>GBG PlayZone</h1>
-        <p>The Ultimate Gaming Tournament Platform</p>
-        <a href="#" class="btn">Enter Arena</a>
-
-        <section class="games">
-            <div class="game-card">Free Fire</div>
-            <div class="game-card">Minecraft</div>
-            <div class="game-card">BGMI</div>
-            <div class="game-card">PC Games</div>
-        </section>
+    <div class="footer">
+        © 2026 GBG PlayZone — Powered by Gulshan
     </div>
 
 </body>

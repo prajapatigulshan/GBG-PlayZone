@@ -5,18 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GBG PlayZone - Tournaments</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .tournament-container {
+            margin-top: 120px;
+            width: 90%;
+            max-width: 1000px;
+            color: white;
+            background: rgba(255,255,255,0.08);
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 25px rgba(255,255,255,0.15);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tournament-container h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #00ff73;
+        }
+
+        .game-section-title {
+            margin-top: 30px;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #00ffbd;
+            text-shadow: 0 0 10px #00ffd5;
+        }
+
+        .tournament-box {
+            margin-top: 15px;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.4);
+            border-left: 4px solid #00ff73;
+        }
+
+        .tournament-box p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .join-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #ff00e6, #00d0ff, #00ff73);
+            color: black;
+            font-weight: 700;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 0 12px rgba(255,255,255,0.3);
+        }
+
+        .join-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px #00ffbd;
+        }
+
+    </style>
 </head>
+
 <body>
 
-    <!-- Background Video -->
-    <video autoplay muted loop id="bg-video">
-        <source src="assets/videos/bg.mp4" type="video/mp4">
-    </video>
+   
 
-    <!-- Overlay -->
     <div class="overlay"></div>
 
-    <!-- Navbar -->
+    <!-- Navigation -->
     <nav>
         <div class="logo">GBG PlayZone</div>
         <ul class="nav-links">
@@ -24,29 +85,51 @@
             <li><a href="games.html">Games</a></li>
             <li><a href="tournaments.html" class="active">Tournaments</a></li>
             <li><a href="register.html">Register</a></li>
+            <li><a href="rules.html">Rules</a></li>
         </ul>
     </nav>
 
-    <!-- Tournaments Section -->
-    <div class="tournaments-container">
+    <!-- Tournament Content -->
+    <div class="tournament-container">
         <h1>Upcoming Tournaments</h1>
 
-        <div class="tournament-card">
-            <h2>Free Fire Championship</h2>
-            <p>Date: 10 April 2026</p>
-            <p>Prize Pool: ₹50,000</p>
+        <!-- Free Fire -->
+        <h2 class="game-section-title">Free Fire Tournament</h2>
+        <div class="tournament-box">
+            <p><strong>Entry Fee:</strong> Free</p>
+            <p><strong>Mode:</strong> Squad</p>
+            <p><strong>Date:</strong> Coming Soon</p>
+            <p><strong>Prize:</strong> ₹500 - ₹2000</p>
+            <a href="register.html" class="join-btn">Join Now</a>
         </div>
 
-        <div class="tournament-card">
-            <h2>Minecraft Build Battle</h2>
-            <p>Date: 17 April 2026</p>
-            <p>Prize Pool: ₹20,000</p>
+        <!-- BGMI -->
+        <h2 class="game-section-title">BGMI Tournament</h2>
+        <div class="tournament-box">
+            <p><strong>Entry Fee:</strong> Free</p>
+            <p><strong>Mode:</strong> Squad / Solo</p>
+            <p><strong>Date:</strong> Coming Soon</p>
+            <p><strong>Prize:</strong> ₹500 - ₹3000</p>
+            <a href="register.html" class="join-btn">Join Now</a>
         </div>
 
-        <div class="tournament-card">
-            <h2>PC Gaming League</h2>
-            <p>Date: 25 April 2026</p>
-            <p>Prize Pool: ₹30,000</p>
+        <!-- Minecraft -->
+        <h2 class="game-section-title">Minecraft Championship</h2>
+        <div class="tournament-box">
+            <p><strong>Entry Fee:</strong> Free</p>
+            <p><strong>Mode:</strong> Challenges / Survival</p>
+            <p><strong>Date:</strong> Coming Soon</p>
+            <p><strong>Prize:</strong> ₹300 - ₹1000</p>
+            <a href="register.html" class="join-btn">Join Now</a>
+        </div>
+
+        <!-- PC Games -->
+        <h2 class="game-section-title">PC Games Arena</h2>
+        <div class="tournament-box">
+            <p><strong>Games:</strong> Valorant, CS:GO, R6 Siege, GTA Challenges</p>
+            <p><strong>Date:</strong> Coming Soon</p>
+            <p><strong>Prize:</strong> ₹500 - ₹2500</p>
+            <a href="register.html" class="join-btn">Join Now</a>
         </div>
 
     </div>

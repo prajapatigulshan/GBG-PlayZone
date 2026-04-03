@@ -5,18 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GBG PlayZone - Games</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Search Box Styling */
+        .search-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .search-container input {
+            width: 250px;
+            padding: 10px 15px;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+        }
+
+        .search-container input:focus {
+            box-shadow: 0 0 10px #ffaa00;
+        }
+    </style>
 </head>
+
 <body>
 
-    <!-- Background Video -->
-    <video autoplay muted loop id="bg-video">
-        <source src="assets/videos/bg.mp4" type="video/mp4">
-    </video>
-
-    <!-- Overlay -->
+    
+    <!-- Dark Overlay -->
     <div class="overlay"></div>
 
-    <!-- NAVBAR SAME AS HOME PAGE -->
+    <!-- Navigation -->
     <nav>
         <div class="logo">GBG PlayZone</div>
         <ul class="nav-links">
@@ -24,18 +44,77 @@
             <li><a href="games.html" class="active">Games</a></li>
             <li><a href="tournaments.html">Tournaments</a></li>
             <li><a href="register.html">Register</a></li>
+            <li><a href="rules.html">Rules</a></li>
         </ul>
     </nav>
 
-    <!-- Games Section -->
-    <div class="games-container">
-        <h1>Our Games</h1>
+    <!-- Main Content -->
+    <div class="content">
 
-        <div class="game-card">Free Fire</div>
-        <div class="game-card">Minecraft</div>
-        <div class="game-card">BGMI</div>
-        <div class="game-card">PC Games</div>
+        <h1>ALL GAMES</h1>
+        <p>Explore the top games available on GBG PlayZone</p>
+
+        <!-- Search Box -->
+        <div class="search-container">
+            <input type="text" id="gameSearch" placeholder="Search for a game..." onkeyup="filterGames()">
+        </div>
+
+        <!-- Games List -->
+        <section class="games" id="gamesList">
+
+            <div class="game-card">Free Fire</div>
+            <div class="game-card">Minecraft</div>
+            <div class="game-card">BGMI</div>
+            <div class="game-card">PC Games</div>
+
+            <div class="game-card">Valorant</div>
+            <div class="game-card">Call of Duty</div>
+            <div class="game-card">Apex Legends</div>
+            <div class="game-card">Fortnite</div>
+
+            <div class="game-card">League of Legends</div>
+            <div class="game-card">Dota 2</div>
+            <div class="game-card">Overwatch</div>
+            <div class="game-card">Rainbow Six Siege</div>
+
+            <div class="game-card">CS:GO</div>
+            <div class="game-card">PUBG Mobile</div>
+            <div class="game-card">Genshin Impact</div>
+            <div class="game-card">Among Us</div>
+
+            <div class="game-card">Rocket League</div>
+            <div class="game-card">Hearthstone</div>
+            <div class="game-card">World of Warcraft</div>
+            <div class="game-card">Destiny 2</div>
+
+            <div class="game-card">Cyberpunk 2077</div>
+            <div class="game-card">The Witcher 3</div>
+            <div class="game-card">Red Dead Redemption 2</div>
+            <div class="game-card">Assassin's Creed Valhalla</div>
+
+            <div class="game-card">FIFA 21</div>
+            <div class="game-card">NBA 2K21</div>
+            <div class="game-card">Madden NFL 21</div>
+
+            <div class="game-card">Gran Turismo Sport</div>
+            <div class="game-card">Forza Horizon 4</div>
+
+        </section>
+
     </div>
+
+    <!-- Search Script -->
+    <script>
+        function filterGames() {
+            let input = document.getElementById('gameSearch').value.toUpperCase();
+            let games = document.getElementById('gamesList').getElementsByClassName('game-card');
+
+            for (let i = 0; i < games.length; i++) {
+                let name = games[i].textContent.toUpperCase();
+                games[i].style.display = name.includes(input) ? "" : "none";
+            }
+        }
+    </script>
 
 </body>
 </html>

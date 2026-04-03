@@ -8,15 +8,7 @@
 </head>
 <body>
 
-    <!-- Background Video -->
-    <video autoplay muted loop id="bg-video">
-        <source src="assets/videos/bg.mp4" type="video/mp4">
-    </video>
-
-    <!-- Overlay -->
-    <div class="overlay"></div>
-
-    <!-- Navigation (Same as Homepage) -->
+    <!-- Navigation -->
     <nav>
         <div class="logo">GBG PlayZone</div>
         <ul class="nav-links">
@@ -24,36 +16,33 @@
             <li><a href="games.html">Games</a></li>
             <li><a href="tournaments.html">Tournaments</a></li>
             <li><a href="register.html" class="active">Register</a></li>
+            <li><a href="rules.html">Rules</a></li>
         </ul>
     </nav>
 
-    <!-- Registration Section -->
-    <div class="register-container">
-        <h1>Player Registration</h1>
+    
 
-        <form action="#" method="POST" class="register-form">
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Register Form Content -->
+    <div class="content">
+        <h1>Register for GBG PlayZone</h1>
+        <p>Join the ultimate gaming tournament platform</p>
+
+        <form class="register-form" action="#" method="post">
             <input type="text" name="name" placeholder="Full Name" required>
-            <input type="text" name="team" placeholder="Team Name" required>
-            <input type="text" name="game" placeholder="Game Name (Free Fire / Minecraft / etc.)" required>
-            <input type="text" name="ingameid" placeholder="In-Game ID" required>
-            <input type="text" name="whatsapp" placeholder="WhatsApp Number" required>
-
-            <button type="submit">Register</button>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm-password" placeholder="Confirm Password" required>
+            <button type="submit" class="btn">Register Now</button>
         </form>
+
+        <p style="margin-top:15px; color:white;">
+            Already have an account? <a href="#" style="color:#ffcc00;">Login</a>
+        </p>
     </div>
-<script>
-const form = document.querySelector('.register-form');
 
-form.addEventListener('submit', function(e) {
-    e.preventDefault(); // Page reload रोकता है
-    const name = form.name.value;
-    const team = form.team.value;
-    const game = form.game.value;
-    const ingameid = form.ingameid.value;
-    const whatsapp = form.whatsapp.value;
-
-    alert(`Player Registered!\nName: ${name}\nTeam: ${team}\nGame: ${game}`);
-});
-</script>
 </body>
 </html>
